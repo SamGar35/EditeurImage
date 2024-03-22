@@ -1,0 +1,62 @@
+:root{
+    --base-bg-color : #fff;
+    --container-bg-color : #eeb;
+    font-family: "Varela Round", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #113;
+}
+
+body {
+    margin: 0;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+#imgUploader, #imgDownloader {
+    margin-bottom: 1em;
+}
+
+#imgUploader label, #imgDownloader label {
+    margin-bottom: 1em;
+}
+
+#container {
+    background-color: var(--container-bg-color);
+    height: 100%;
+    width: 95%;
+    padding: 1em;
+}
+
+#imageToModify {
+    display: none;
+}
+
+#imgCanvas {
+    max-width: 90%;
+}
+
+#groupSliders {
+    width: 90%;
+    margin-bottom: 2em;
+}
+
+#slider label {
+    display: inline-block;
+    width: 40%;
+}
+
+#slider input {
+    width: 40%;
+}
+
+#slider output {
+    display: inline-block;
+    width: 10%;
+}

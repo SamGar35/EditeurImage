@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <script src="./JS/main.js" defer></script>
+    <title>Editeur d'image</title>
+</head>
+<body>
+    <header class="flex">
+        <h1>Editeur d'image</h1>
+    </header>
+    <main class="flex">
+        <div id="imgUploader" class="flex">
+            <label for="imgUpload">Image :</label>
+            <input type="file" name="imgUpload" id="imgUpload" accept=".jpg, .jpeg, .png">
+        </div>
+        <div id="container">
+            <div id="imgContainer" class="flex">
+                <img id="imageToModify" src="" alt="">
+                <canvas id="imgCanvas"></canvas>
+            </div>
+        </div>
+    </main>
+    <aside class="flex">
+        <h5>Réglages</h5>
+        <div id="groupSliders">
+            <div id="slider">
+                <label for="filterGrayscale">Niveau de gris :</label>
+                <input type="range" name="filterGrayscale" id="filterGrayscale" min="0" max="100" step="1" value="0">
+                <output id="grayscaleValue">0 %</output>
+            </div>
+            <div id="slider">
+                <label for="filterSepia">Sepia :</label>
+                <input type="range" name="filterSepia" id="filterSepia" min="0" max="100" step="1" value="0">
+                <output id="sepiaValue">0 %</output>
+            </div>
+            <div id="slider">
+                <label for="filterContrast">Contraste :</label>
+                <input type="range" name="filterContrast" id="filterContrast" min="0" max="200" step="1" value="100">
+                <output id="contrastValue">100 %</output>
+            </div>
+            <div id="slider">
+                <label for="filterBrightness">Luminosité :</label>
+                <input type="range" name="filterBrightness" id="filterBrightness" min="0" max="200" step="1" value="100">
+                <output id="brightnessValue">100 %</output>
+            </div>
+            <div id="slider">
+                <label for="filterInvert">Inversion des couleurs :</label>
+                <input type="range" name="filterInvert" id="filterInvert" min="0" max="100" step="1" value="0">
+                <output id="invertValue">0 %</output>
+            </div>
+            <div id="slider">
+                <label for="filterSaturate">Saturation :</label>
+                <input type="range" name="filterSaturate" id="filterSaturate" min="0" max="200" step="1" value="100">
+                <output id="saturateValue">100 %</output>
+            </div>
+        </div>
+    </aside>
+    <footer>
+        <div id="imgDownloader" class="flex">
+            <label for="imgDownload">Cliquez sur le bouton pour télécharger l'image modifiée :</label>
+            <a id="downloadButtonLink" href="#" target="_blank">
+                <button id="downloadButton">Télécharger</button>
+            </a>
+        </div>
+    </footer>    
+</body>
+</html>
